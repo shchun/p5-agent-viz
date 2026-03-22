@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Agent | p5.js Dynamic Renderer</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <!-- Main Background -->
+    <div class="app-container">
+      <header class="app-header">
+        <h1>Agentic Visualizer</h1>
+        <p class="subtitle">AI-driven p5.js dynamic scene generation</p>
+      </header>
+
+      <main class="canvas-container" id="canvas-container">
+        <!-- p5 canvas injected here -->
+        <div class="empty-state" id="empty-state">
+          <div class="glow-orb"></div>
+          <h2>Ready for input</h2>
+          <p>Describe a scene to visualize it with particles, physics, and shapes. Try: "A blue pulsing node connected to a red bouncing node"</p>
+        </div>
+      </main>
+
+      <div class="prompt-container">
+        <form id="prompt-form" class="glass-form">
+          <input 
+            type="text" 
+            id="prompt-input" 
+            placeholder="e.g., 'Draw a bouncing blue pulsing circle and a red line...'" 
+            autocomplete="off"
+            required 
+          />
+          <button type="submit" id="submit-btn" aria-label="Generate Scene">
+            <span class="btn-text">Generate</span>
+            <div class="spinner loader-hidden" id="loader"></div>
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

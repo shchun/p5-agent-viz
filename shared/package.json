@@ -1,0 +1,9 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "description": "Shared schemas for AI agent and p5.js frontend",
+  "main": "schema.ts",
+  "dependencies": {
+    "zod": "^3.22.4"
+  }
+}
