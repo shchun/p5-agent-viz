@@ -15,15 +15,15 @@
     <div class="app-container">
       <header class="app-header">
         <h1>Agentic Visualizer</h1>
-        <p class="subtitle">AI-driven p5.js dynamic scene generation</p>
+        <p class="subtitle">AI 기반 p5.js 동적 화면 생성기</p>
       </header>
 
       <main class="canvas-container" id="canvas-container">
         <!-- p5 canvas injected here -->
         <div class="empty-state" id="empty-state">
           <div class="glow-orb"></div>
-          <h2>Ready for input</h2>
-          <p>Describe a scene to visualize it with particles, physics, and shapes. Try: "A blue pulsing node connected to a red bouncing node"</p>
+          <h2>명령 대기 중</h2>
+          <p>화면에 보고 싶은 장면이나 워크플로우를 자유롭게 묘사해 보세요. 예: "파란색 원 두 개가 통통 튀고 점선으로 연결되어 있어"</p>
         </div>
       </main>
 
@@ -32,12 +32,12 @@
           <input 
             type="text" 
             id="prompt-input" 
-            placeholder="e.g., 'Draw a bouncing blue pulsing circle and a red line...'" 
+            placeholder="예시: '빨간색 노드가 맥박처럼 뛰고 파란색 상자랑 이어져 있어...'" 
             autocomplete="off"
             required 
           />
-          <button type="submit" id="submit-btn" aria-label="Generate Scene">
-            <span class="btn-text">Generate</span>
+          <button type="submit" id="submit-btn" aria-label="생성하기">
+            <span class="btn-text">생성 (Generate)</span>
             <div class="spinner loader-hidden" id="loader"></div>
           </button>
         </form>
