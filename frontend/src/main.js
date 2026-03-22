@@ -13,6 +13,11 @@ form.addEventListener('submit', async (e) => {
   const prompt = input.value.trim();
   if (!prompt) return;
 
+  if (prompt.length > 500) {
+    alert("입력 텍스트는 500자를 초과할 수 없습니다!");
+    return;
+  }
+
   // Toggle Loading State
   btnText.classList.add('hidden');
   loader.classList.remove('loader-hidden');
